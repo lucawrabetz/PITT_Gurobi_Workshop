@@ -1,0 +1,7 @@
+NormAdjust  0
+BranchDir  1
+Heuristics  0
+PumpPasses  4000000
+ZeroObjNodes  20000000
+TuneResults  1
+OutputFlag  0

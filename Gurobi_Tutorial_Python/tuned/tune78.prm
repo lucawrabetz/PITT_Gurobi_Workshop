@@ -1,0 +1,6 @@
+Heuristics  0
+MinRelNodes  20000000
+PumpPasses  4000000
+GomoryPasses  15
+TuneResults  1
+OutputFlag  0

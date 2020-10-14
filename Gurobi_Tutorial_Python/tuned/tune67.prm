@@ -1,0 +1,7 @@
+Heuristics  0
+MIPFocus  3
+PumpPasses  4000000
+Cuts  2
+Presolve  2
+TuneResults  1
+OutputFlag  0

@@ -1,0 +1,7 @@
+Heuristics  0
+MIPFocus  2
+PumpPasses  4000000
+ZeroObjNodes  20000000
+Presolve  2
+TuneResults  1
+OutputFlag  0

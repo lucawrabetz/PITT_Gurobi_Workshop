@@ -1,0 +1,5 @@
+NormAdjust  3
+Heuristics  0
+MIPFocus  2
+TuneResults  1
+OutputFlag  0

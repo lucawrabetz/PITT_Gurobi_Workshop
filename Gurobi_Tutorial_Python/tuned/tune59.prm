@@ -1,0 +1,7 @@
+Heuristics  0
+PumpPasses  4000000
+ZeroObjNodes  20000000
+StrongCGCuts  1
+AggFill  100
+TuneResults  1
+OutputFlag  0

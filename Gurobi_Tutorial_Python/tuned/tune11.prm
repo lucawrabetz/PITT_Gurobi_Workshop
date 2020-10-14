@@ -1,0 +1,4 @@
+MinRelNodes  4000000
+MIPFocus  2
+TuneResults  1
+OutputFlag  0

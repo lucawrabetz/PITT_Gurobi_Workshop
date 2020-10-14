@@ -1,0 +1,5 @@
+Heuristics  0
+MIPFocus  1
+ZeroObjNodes  20000000
+TuneResults  1
+OutputFlag  0

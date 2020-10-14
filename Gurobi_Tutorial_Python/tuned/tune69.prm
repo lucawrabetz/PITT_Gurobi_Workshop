@@ -1,0 +1,6 @@
+Heuristics  0
+MinRelNodes  4000000
+VarBranch  1
+ZeroHalfCuts  1
+TuneResults  1
+OutputFlag  0

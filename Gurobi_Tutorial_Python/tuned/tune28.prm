@@ -1,0 +1,5 @@
+Heuristics  0
+ZeroObjNodes  20000000
+GomoryPasses  5
+TuneResults  1
+OutputFlag  0

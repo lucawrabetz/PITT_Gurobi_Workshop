@@ -1,0 +1,7 @@
+Heuristics  0
+MinRelNodes  4000000
+MIPFocus  2
+PumpPasses  4000000
+ZeroObjNodes  0
+TuneResults  1
+OutputFlag  0
