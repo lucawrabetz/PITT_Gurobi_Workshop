@@ -1,4 +1,3 @@
-Heuristics  0
-PreDepRow  0
+MinRelNodes  20000000
 TuneResults  1
 OutputFlag  0

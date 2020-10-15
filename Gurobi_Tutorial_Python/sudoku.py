@@ -153,7 +153,7 @@ def solRELX_Ax_e_b(A,b,c,j,debug):#x is restricted positive, problem is maximiza
 tm=[]
 debug=0
 for i in range(100):
-    A,b=read_sudoku_file("instances_sudoku/"+str(i+1)+"-Sudoku.txt")
+    A,b=read_sudoku_file("dat/"+str(i+1)+"-Sudoku.txt")
     resuts=solRELX_Ax_e_b(A,b,[0 for i in range(len(A[0]))],i,debug);
     if resuts==None: continue;
     x,t=resuts;

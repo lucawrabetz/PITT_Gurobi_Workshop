@@ -1,7 +1,3 @@
-Heuristics  0
 MinRelNodes  20000000
-MIPFocus  3
-ZeroObjNodes  20000000
-AggFill  100
 TuneResults  1
 OutputFlag  0

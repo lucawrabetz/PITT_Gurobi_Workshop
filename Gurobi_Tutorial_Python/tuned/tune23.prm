@@ -1,9 +1,5 @@
-DegenMoves  8
 Heuristics  0
-MIPFocus  2
-PumpPasses  4000000
-ZeroObjNodes  4000000
-Cuts  3
-Presolve  2
+MinRelNodes  0
+AggFill  100
 TuneResults  1
 OutputFlag  0

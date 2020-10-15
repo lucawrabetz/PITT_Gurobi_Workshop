@@ -1,5 +1,4 @@
 Heuristics  0
-MIPFocus  3
-CutPasses  10
+PumpPasses  20000000
 TuneResults  1
 OutputFlag  0

@@ -1,7 +1,3 @@
-Heuristics  0
-MIPFocus  3
-VarBranch  1
-GomoryPasses  15
-AggFill  100
+PumpPasses  4000000
 TuneResults  1
 OutputFlag  0

@@ -1,7 +1,4 @@
 Heuristics  0
-PumpPasses  4000000
-ZeroObjNodes  20000000
-GomoryPasses  5
-StrongCGCuts  1
+Cuts  1
 TuneResults  1
 OutputFlag  0

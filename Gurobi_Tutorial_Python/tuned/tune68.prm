@@ -1,5 +1,4 @@
-Heuristics  0
 MinRelNodes  20000000
-MIPFocus  3
+GomoryPasses  15
 TuneResults  1
 OutputFlag  0

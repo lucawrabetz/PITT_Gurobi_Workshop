@@ -1,7 +1,4 @@
-BranchDir  1
-DegenMoves  2
 Heuristics  0
-MinRelNodes  4000000
-Cuts  0
+CutPasses  10
 TuneResults  1
 OutputFlag  0

@@ -1,7 +1,4 @@
 Heuristics  0
-MinRelNodes  4000000
-ZeroObjNodes  4000000
-GomoryPasses  15
-NumericFocus  2
+PumpPasses  20000000
 TuneResults  1
 OutputFlag  0

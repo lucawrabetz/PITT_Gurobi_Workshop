@@ -1,5 +1,4 @@
-NormAdjust  3
-Heuristics  0
-MIPFocus  2
+PumpPasses  0
+PrePasses  1
 TuneResults  1
 OutputFlag  0

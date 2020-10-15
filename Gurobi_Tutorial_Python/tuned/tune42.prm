@@ -1,5 +1,4 @@
-Heuristics  0
-MinRelNodes  0
-VarBranch  1
+PumpPasses  0
+PrePasses  1
 TuneResults  1
 OutputFlag  0

@@ -1,4 +1,5 @@
 Heuristics  0
-ZeroObjNodes  4000000
+MIPFocus  3
+PumpPasses  0
 TuneResults  1
 OutputFlag  0

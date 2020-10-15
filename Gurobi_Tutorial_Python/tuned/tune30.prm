@@ -1,5 +1,4 @@
-BranchDir  1
-DegenMoves  7
 Heuristics  0
+PumpPasses  20000000
 TuneResults  1
 OutputFlag  0

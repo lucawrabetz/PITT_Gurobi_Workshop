@@ -1,7 +1,4 @@
-Method  0
 Heuristics  0
-MinRelNodes  4000000
-Cuts  2
-GomoryPasses  5
+PumpPasses  0
 TuneResults  1
 OutputFlag  0
