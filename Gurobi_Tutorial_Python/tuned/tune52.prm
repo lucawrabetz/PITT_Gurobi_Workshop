@@ -1,5 +1,4 @@
 Heuristics  0
-MinRelNodes  20000000
-PumpPasses  0
+CutPasses  10
 TuneResults  1
 OutputFlag  0

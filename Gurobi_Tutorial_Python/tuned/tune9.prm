@@ -1,4 +1,4 @@
-MinRelNodes  20000000
-AggFill  100
+Heuristics  0
+VarBranch  1
 TuneResults  1
 OutputFlag  0

@@ -1,4 +1,5 @@
 Heuristics  0
-CutPasses  10
+PumpPasses  0
+StrongCGCuts  1
 TuneResults  1
 OutputFlag  0

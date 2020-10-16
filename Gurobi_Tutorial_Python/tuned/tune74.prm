@@ -1,4 +1,5 @@
-MinRelNodes  20000000
-ZeroHalfCuts  1
+Heuristics  0
+PumpPasses  0
+StrongCGCuts  1
 TuneResults  1
 OutputFlag  0

@@ -1,4 +1,5 @@
-MinRelNodes  20000000
+Heuristics  0
+MIPFocus  3
 PumpPasses  4000000
 TuneResults  1
 OutputFlag  0

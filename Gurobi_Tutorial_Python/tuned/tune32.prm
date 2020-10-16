@@ -1,4 +1,3 @@
-ZeroObjNodes  4000000
-Cuts  3
+MinRelNodes  20000000
 TuneResults  1
 OutputFlag  0

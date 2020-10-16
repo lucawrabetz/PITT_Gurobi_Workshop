@@ -1,3 +1,5 @@
-PumpPasses  0
+Heuristics  0
+GomoryPasses  15
+StrongCGCuts  1
 TuneResults  1
 OutputFlag  0

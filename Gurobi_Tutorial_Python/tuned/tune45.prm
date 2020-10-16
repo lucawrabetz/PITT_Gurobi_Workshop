@@ -1,4 +1,5 @@
 Heuristics  0
-VarBranch  1
+MIPFocus  3
+PumpPasses  4000000
 TuneResults  1
 OutputFlag  0

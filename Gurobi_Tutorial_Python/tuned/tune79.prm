@@ -1,4 +1,5 @@
 Heuristics  0
-Cuts  0
+PumpPasses  4000000
+AggFill  100
 TuneResults  1
 OutputFlag  0

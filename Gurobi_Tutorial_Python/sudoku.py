@@ -1,41 +1,24 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jun  7 16:37:11 2019
-
-@author: tomas
-"""
 import time
 from gurobipy import *
 import os
 import numpy as np
 
 def read_sudoku_file(filename):
+    # Read Data from file
     f = open(filename)
-
     grid=[]
     l=f.readlines();
     for (i,ln) in enumerate(l):
         row=ln.replace(" \n","").split(" ");
-#        row=ln.split(",");
         grid.append([]);
         for j in range(len(row)):
             grid[i].append(int(row[j]));
     f.close()
-        
-    #grid = f.read().split(",")
     
     s = sum([len(S) for S in grid]);#len(grid[0])
-    n = int(s**0.5);
-    
-    
-    # Create our 3-D array of model variables
-    
-    #model = Model('sudoku')
-    
-    #vars = model.addVars(n,n,n, vtype=GRB.CONTINUOUS, lb=0, ub=1 , name='G')
-    #vars = model.addVars(n,n,n, vtype=GRB.BINARY, name='G')
-    
+    print(s)
+    return None
+    n = int(s**0.5); # n is 9
     
     # Fix variables associated with cells whose values are pre-specified
     A=[];b=[];
@@ -43,93 +26,65 @@ def read_sudoku_file(filename):
         for j in range(n):
             if grid[i][j] != 0:
                 v = int(grid[i][j]) - 1
-    #            vars[i,j,v].LB = 1
                 l=len(A)
-                A+=[[0 for k in range( n**3)]];
-                A[l][i*n**2 + j*n + v]=1;b+=[1];
-                
-    
+                A+=[[0 for k in range(n**3)]]
+                A[l][i*n**2 + j*n + v]=1;b+=[1]
     
     # Each cell must take one value
-    
     for i in range(n):
         for j in range(n):
             l=len(A);
-            A+=[[0 for k in range( n**3)]];
+            A+=[[0 for k in range( n**3)]]
             b+=[1]
             for k in range(n):
-                A[l][i * n**2 + j * n + k]=1;
-            
-                
-    #model.addConstrs((vars.sum(i,j,'*') == 1
-    #                 for i in range(n)
-    #                 for j in range(n)), name='V')
+                A[l][i * n**2 + j * n + k]=1
     
     # Each value appears once per row
-    
     for i in range(n):
         for j in range(n):
             l=len(A);
-            A+=[[0 for k in range( n**3)]];
+            A+=[[0 for k in range( n**3)]]
             b+=[1]
             for k in range(n):
-                A[l][j * n**2 + k * n + i]=1;
-    
-    #model.addConstrs((vars.sum(i,'*',v) == 1
-    #                 for i in range(n)
-    #                 for v in range(n)), name='R')
+                A[l][j * n**2 + k * n + i]=1
     
     # Each value appears once per column
-    
-    
     for i in range(n):
         for j in range(n):
             l=len(A);
-            A+=[[0 for k in range( n**3)]];
+            A+=[[0 for k in range( n**3)]]
             b+=[1]
             for k in range(n):
-                A[l][k * n**2 + i * n + j]=1;
-    
-    #model.addConstrs((vars.sum('*',j,v) == 1
-    #                 for j in range(n)
-    #                 for v in range(n)), name='C')
-    #
+                A[l][k * n**2 + i * n + j]=1
     
     # Each value appears once per subgrid
     n05=int(n**0.5);
     for i1 in range(n05):
         for j1 in range(n05):
             for k in range(n):
-                l=len(A);
-                A+=[[0 for m in range( n**3)]];
+                l=len(A)
+                A+=[[0 for m in range( n**3)]]
                 b+=[1]
                 for i2 in range(i1*n05,(i1+1)*n05):
                     for j2 in range(j1*n05,(j1+1)*n05):
-                        A[l][i2 * n**2 + j2 * n + k]=1;
+                        A[l][i2 * n**2 + j2 * n + k]=1
     return A,b
 
+###################################################################################
+###################################################################################
+###################################################################################
 
-def solRELX_Ax_e_b(A,b,c,j,debug):#x is restricted positive, problem is maximization
-    m = Model("sudoku"+str(j+1));
-    m.setParam( 'OutputFlag', debug)
-    # Create variables
-    x={};
-    C={}
-    for i in range(len(A[0])):
-#        x[i] = m.addVar(vtype=GRB.CONTINUOUS, lb=0,obj=c[i]);
-        x[i] = m.addVar(vtype=GRB.BINARY, lb=0,obj=c[i]);
-    for (i,a) in enumerate(A):
-        C[i]=m.addConstr(quicksum(a[k]*x[k] for k in range(len(a))) == b[i]);
- 
-    m.update();
+def solRELX_Ax_e_b(A,b,c,j,debug):
+    #x is restricted positive, problem is maximization
+    
+    # Create variables and constraints
     
     t=time.time()
     m.optimize();
     t=time.time()-t;
     if m.status == GRB.Status.OPTIMAL:
         if debug: print('Optimal objective: %g' % m.objVal)
-        m.write("models/out"+str(j+1)+".lp")
-        return [x[i].x for i in range(len(c))],t;
+        
     elif m.status == GRB.Status.INF_OR_UNBD:
         if debug: print('Model is infeasible or unbounded')
         return None
@@ -149,6 +104,9 @@ def solRELX_Ax_e_b(A,b,c,j,debug):#x is restricted positive, problem is maximiza
         if debug: print('Optimization ended with status %d' % model.status)
         return None
 
+###################################################################################
+###################################################################################
+###################################################################################
 
 tm=[]
 debug=0
@@ -177,6 +135,9 @@ for i in range(100):
             if (i+1)%3==0 and i!=0:
                 print("---------------------------------")
 
+###################################################################################
+###################################################################################
+###################################################################################
 
 ttm=[]
 for i in range(100):

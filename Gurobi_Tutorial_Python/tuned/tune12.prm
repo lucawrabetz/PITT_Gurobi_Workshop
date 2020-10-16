@@ -1,4 +1,4 @@
 Heuristics  0
-StrongCGCuts  1
+MinRelNodes  0
 TuneResults  1
 OutputFlag  0

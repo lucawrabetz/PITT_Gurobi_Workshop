@@ -1,3 +1,4 @@
-PumpPasses  4000000
+Heuristics  0
+CutPasses  10
 TuneResults  1
 OutputFlag  0
