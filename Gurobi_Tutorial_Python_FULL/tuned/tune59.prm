@@ -1,4 +1,3 @@
-Heuristics  0
-StrongCGCuts  1
+ZeroObjNodes  4000000
 TuneResults  1
 OutputFlag  0

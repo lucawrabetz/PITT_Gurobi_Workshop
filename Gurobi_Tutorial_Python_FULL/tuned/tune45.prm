@@ -1,4 +1,4 @@
-Heuristics  0
-VarBranch  1
+MinRelNodes  20000000
+Presolve  2
 TuneResults  1
 OutputFlag  0

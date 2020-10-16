@@ -1,5 +1,4 @@
-Heuristics  0
-PumpPasses  0
-StrongCGCuts  1
+MinRelNodes  20000000
+GomoryPasses  15
 TuneResults  1
 OutputFlag  0

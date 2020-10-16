@@ -1,4 +1,3 @@
-Heuristics  0
-MinRelNodes  0
+GomoryPasses  15
 TuneResults  1
 OutputFlag  0

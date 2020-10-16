@@ -1,4 +1,4 @@
-ZeroObjNodes  4000000
-GomoryPasses  15
+Heuristics  0
+MinRelNodes  20000000
 TuneResults  1
 OutputFlag  0

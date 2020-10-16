@@ -1,5 +1,5 @@
 Heuristics  0
+MinRelNodes  20000000
 PumpPasses  0
-StrongCGCuts  1
 TuneResults  1
 OutputFlag  0

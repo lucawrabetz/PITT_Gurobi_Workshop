@@ -1,4 +1,3 @@
-Heuristics  0
-CutPasses  10
+MinRelNodes  4000000
 TuneResults  1
 OutputFlag  0

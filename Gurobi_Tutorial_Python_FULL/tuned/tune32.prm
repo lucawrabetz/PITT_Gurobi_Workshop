@@ -1,4 +1,4 @@
-ZeroObjNodes  4000000
-Cuts  3
+Heuristics  0
+PumpPasses  0
 TuneResults  1
 OutputFlag  0

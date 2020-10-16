@@ -1,4 +1,3 @@
-MinRelNodes  20000000
-AggFill  100
+PumpPasses  0
 TuneResults  1
 OutputFlag  0

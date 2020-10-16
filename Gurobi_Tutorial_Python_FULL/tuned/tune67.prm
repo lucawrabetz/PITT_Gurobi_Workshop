@@ -1,3 +1,4 @@
-PumpPasses  0
+PumpPasses  4000000
+Presolve  2
 TuneResults  1
 OutputFlag  0

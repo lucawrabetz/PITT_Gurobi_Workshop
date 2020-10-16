@@ -109,7 +109,7 @@ def read_sudoku_file(filename):
     return A,b
 
 
-def solRELX_Ax_e_b(A,b,c,j,debug):#x is restricted positive, problem is maximization
+def solRELX_Ax_e_b(A,b,c,j,debug):
     m = Model("sudoku"+str(j+1));
     m.setParam( 'OutputFlag', debug)
     # Create variables
@@ -119,8 +119,7 @@ def solRELX_Ax_e_b(A,b,c,j,debug):#x is restricted positive, problem is maximiza
 #        x[i] = m.addVar(vtype=GRB.CONTINUOUS, lb=0,obj=c[i]);
         x[i] = m.addVar(vtype=GRB.BINARY, lb=0,obj=c[i]);
     for (i,a) in enumerate(A):
-        C[i]=m.addConstr(quicksum(a[k]*x[k] for k in range(len(a))) == b[i]);
- 
+        C[i]=m.addConstr(quicksum(a[k]*x[k] for k in range(len(a))) == b[i])
     m.update();
     
     t=time.time()
