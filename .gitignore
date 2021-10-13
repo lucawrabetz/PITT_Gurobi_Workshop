@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Directories to ignore 
+Gurobi_Tutorial_Python/models/
+Gurobi_Tutorial_Python/tuned/
